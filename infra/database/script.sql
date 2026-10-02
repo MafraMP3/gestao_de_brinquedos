@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS brinquedos (
     categoria varchar(100) NOT NULL,
     faixaEtaria INT NOT NULL,
     preco decimal (10,2) NOT NULL,
-    QuantiaEstoque int  NOT NULL
+    quantiaEstoque int  NOT NULL
 )

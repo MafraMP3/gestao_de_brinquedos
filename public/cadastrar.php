@@ -19,7 +19,12 @@ if ($nome == null || $categoria == null || $faixaEtaria == null || $preco == nul
 $sql = "INSERT INTO brinquedos (nome,categoria,faixaEtaria,preco,quantiaEstoque) VALUES (?,?,?,?,?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssidi" $nome,$categoria,$faixaEtaria,$preco,$quantiaEstoque);
-$stmt->execute();
+$stmt->bind_param("ssidi", $nome,$categoria,$faixaEtaria,$preco,$quantiaEstoque);
 
-header("location: index.php");
+if ($stmt->execute()) {
+    header("Location: index.php");
+    exit();
+} else {
+    echo "Erro ao cadastrar: " . $stmt->error;
+}
+
