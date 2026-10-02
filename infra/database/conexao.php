@@ -1,12 +1,12 @@
 <?php
 
 $host = "localhost";
-$passowrd = "";
+$password = "";
 $user = "root";
-$database = "crud_briquedos";
+$database = "crud_brinquedos";
 
 $conn = new mysqli($host,$user,$password,$database,6608);
 
 if ($conn -> connect_error){
-    die("Erro na conexão");
+    die("Erro na conexão" . $conn->connect_error);
     }
