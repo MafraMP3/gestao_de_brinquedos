@@ -38,5 +38,7 @@ include "infra/database/conexao.php";
         <input type="submit" value="Cadastrar">
     </form>
 
+    <br><br>
+    <?php include "public/components/tableBrinquedos.php"; ?>
 </body>
 </html>

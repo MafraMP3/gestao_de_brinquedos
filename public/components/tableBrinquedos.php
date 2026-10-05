@@ -33,7 +33,6 @@
             <td>" . $linha["faixaEtaria"] . "</td>
             <td>" . $linha["preco"] . "</td>
             <td>" . $linha["quantiaEstoque"] . "</td>
-            <td>" . $linha["usuario_id"] . "</td>
             <td>
                 <a href='editar.php?id=" . $linha["id"] . "' 
                    class='btn btn-outline-dark'>
