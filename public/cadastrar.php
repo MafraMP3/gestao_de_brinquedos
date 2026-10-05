@@ -19,9 +19,10 @@ if ($nome == null || $categoria == null || $faixaEtaria == null || $preco == nul
 $sql = "INSERT INTO brinquedos (nome,categoria,faixaEtaria,preco,quantiaEstoque) VALUES (?,?,?,?,?)";
 
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssidi", $nome,$categoria,$faixaEtaria,$preco,$quantiaEstoque);
+$stmt->bind_param("sssdi", $nome,$categoria,$faixaEtaria,$preco,$quantiaEstoque);
 
 if ($stmt->execute()) {
+    echo "brinquedo cadastrado com sucesso";
     header("Location: index.php");
     exit();
 } else {
