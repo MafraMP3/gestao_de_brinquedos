@@ -22,10 +22,8 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("sssdi", $nome,$categoria,$faixaEtaria,$preco,$quantiaEstoque);
 
 if ($stmt->execute()) {
-    echo "brinquedo cadastrado com sucesso";
-    header("Location: index.php");
+    header("Location: ../index.php");
     exit();
 } else {
-    echo "Erro ao cadastrar: " . $stmt->error;
+    die("Erro ao cadastrar: " . $stmt->error);
 }
-
