@@ -5,7 +5,7 @@ CREATE TABLE IF NOT EXISTS brinquedos (
     id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     nome varchar(100) NOT NULL,
     categoria varchar(100) NOT NULL,
-    faixaEtaria INT NOT NULL,
+    faixaEtaria varchar(100) NOT NULL,
     preco decimal (10,2) NOT NULL,
     quantiaEstoque int  NOT NULL
 )

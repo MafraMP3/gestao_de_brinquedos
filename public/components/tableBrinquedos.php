@@ -34,14 +34,14 @@
             <td>" . $linha["preco"] . "</td>
             <td>" . $linha["quantiaEstoque"] . "</td>
             <td>
-                <a href='editar.php?id=" . $linha["id"] . "' 
+                <a href='public/editar.php?id=" . $linha["id"] . "' 
                    class='btn btn-outline-dark'>
                     Editar
                 </a>
             </td>
 
             <td>
-                <a href='excluir.php?id=" . $linha["id"] . "' 
+                <a href='public/excluir.php?id=" . $linha["id"] . "' 
                    class='btn btn-outline-danger'>
                     Excluir
                 </a>

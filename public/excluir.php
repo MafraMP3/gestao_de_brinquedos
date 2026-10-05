@@ -1,5 +1,5 @@
 <?php
-include "../infra/conexao.php";
+include "../infra/database/conexao.php";
 $id = isset($_GET["id"]) ? (int)$_GET["id"] : null;
 $sql = "DELETE FROM brinquedos WHERE id = ?";
 
@@ -12,6 +12,6 @@ if ($id) {
         $stmt->close(); 
     }
 }
-header("location: index.php");
+header("location: ../index.php");
 exit();
 ?>
